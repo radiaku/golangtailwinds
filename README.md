@@ -34,6 +34,14 @@ Before you begin, make sure you have the following installed:
 npm install
 ```
 
+```bash
+npm install tailwindcss @tailwindcss/cli
+```
+
+```bash
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+```
+
 2. Build the initial Tailwind CSS file:
 
 ```bash
