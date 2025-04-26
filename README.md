@@ -35,7 +35,7 @@ npm install
 ```
 
 ```bash
-npm install tailwindcss @tailwindcss/cli
+npm install tailwindcss 
 ```
 
 ```bash
