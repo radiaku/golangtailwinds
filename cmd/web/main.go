@@ -23,6 +23,7 @@ func main() {
 		Addr:    address,
 		Handler: routes.NewRouter(),
 	}
+	fmt.Println(address)
 
 	err := srv.ListenAndServe()
 	if err != nil {

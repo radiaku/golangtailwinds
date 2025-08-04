@@ -8,16 +8,11 @@ import (
 
 func addFiles(mux *chi.Mux) {
 
-	FileServer(mux, "/files", http.Dir("files"))
-	FileServer(mux, "/static", http.Dir("files"))
-	FileServer(mux, "/assets", http.Dir("files"))
-}
+	assets := http.FileServer(http.Dir("./assets/"))
+	static := http.FileServer(http.Dir("./static/"))
+	files := http.FileServer(http.Dir("./files/"))
+	mux.Handle("/assets/*", http.StripPrefix("/assets", assets))
+	mux.Handle("/static/*", http.StripPrefix("/static", static))
+	mux.Handle("/files/*", http.StripPrefix("/files", files))
 
-
-func FileServer(r chi.Router, path string, root http.FileSystem) {
-	fs := http.StripPrefix(path, http.FileServer(root))
-
-	r.Get(path+"/*", func(w http.ResponseWriter, r *http.Request) {
-		fs.ServeHTTP(w, r)
-	})
 }
