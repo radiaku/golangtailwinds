@@ -1,3 +1,5 @@
-module github.com/user/golang_tailwinds
+module golang_tailwinds
 
 go 1.21
+
+require github.com/go-chi/chi/v5 v5.2.2
