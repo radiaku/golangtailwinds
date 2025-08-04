@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"golang_tailwinds/internal/setup"
 	"golang_tailwinds/routes"
 	"net/http"
 	"os"
@@ -10,6 +11,8 @@ import (
 
 func main() {
 	// Define the port to listen on
+	setup.SetUpIt()
+
 	port := os.Getenv("APP_PORT")
 	if port == "" {
 		port = "8080"

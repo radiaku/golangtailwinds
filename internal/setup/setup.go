@@ -2,7 +2,6 @@ package setup
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strconv"
 
@@ -12,12 +11,17 @@ import (
 
 func SetUpIt() {
 
-	_ = godotenv.Load()
+	err := godotenv.Load()
+	if err != nil {
+		panic("No env")
+	}
+
 	portStr := os.Getenv("PORTPOSTGRE")
 	port, err := strconv.Atoi(portStr)
 	if err != nil {
-		log.Fatalf("Invalid PORT env value: %v", err)
+		panic("Invalid PORT env value")
 	}
+
 	constant.DbNamePostGres = os.Getenv("DBNAMEPOSTGRE")
 	constant.HostPostGres = os.Getenv("HOSTPOSTGRE")
 	constant.PortPostGres = port
