@@ -39,7 +39,7 @@ npm install tailwindcss
 ```
 
 ```bash
-npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+npm run tailwind:watch
 ```
 
 2. Build the initial Tailwind CSS file:
