@@ -9,6 +9,8 @@ import (
 func addFiles(mux *chi.Mux) {
 
 	FileServer(mux, "/files", http.Dir("files"))
+	FileServer(mux, "/static", http.Dir("files"))
+	FileServer(mux, "/assets", http.Dir("files"))
 }
 
 
