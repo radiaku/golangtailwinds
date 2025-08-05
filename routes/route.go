@@ -11,6 +11,7 @@ func NewRouter() http.Handler {
 	r := chi.NewRouter()
 	addFiles(r)
 	addHome(r)
+	addSingle(r)
 
 	return r
 }

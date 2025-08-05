@@ -13,5 +13,5 @@ func Single(w http.ResponseWriter, r *http.Request) {
 		"content": "hi single",
 	}
 
-	render.RenderTemplate(w, "home", data)
+	render.RenderTemplate(w, "single", data)
 }
