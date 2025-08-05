@@ -8,6 +8,6 @@ import (
 
 
 func addSingle(mux *chi.Mux) {
-	mux.Get("/",handler.Single)
+	mux.Get("/single",handler.Single)
 
 }
