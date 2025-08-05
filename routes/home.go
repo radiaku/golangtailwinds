@@ -5,7 +5,7 @@ import (
 	"golang_tailwinds/handler"
 )
 
-func addHomeRoutes(mux *chi.Mux) {
+func addHome(mux *chi.Mux) {
 	mux.Get("/",handler.Home)
 
 }
