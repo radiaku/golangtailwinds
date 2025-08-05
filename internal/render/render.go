@@ -43,6 +43,7 @@ func CreateTemplateCache() (*template.Template, error) {
 
 	// listPath = append(listPath, "templates/*.tmpl")
 	listPath = append(listPath, "templates/homes/*.tmpl")
+	listPath = append(listPath, "templates/single/*.tmpl")
 	TemplateCache, err := ParseEachFolders(listPath)
 	if err != nil {
 		return nil, err
