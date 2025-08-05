@@ -6,7 +6,7 @@ tmp_dir = "tmp"
 
 [build]
   bin = "./tmp/main.exe"
-  cmd = "go build -o ./tmp/main.exe ."
+  cmd = "go build -o ./tmp/main.exe ./cmd/web/main.go"
   delay = 1000
   exclude_dir = ["assets", "tmp", "vendor", "node_modules"]
   exclude_file = []
