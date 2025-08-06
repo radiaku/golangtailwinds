@@ -4,8 +4,8 @@
   "description": "Go web application with Tailwind CSS hot reloading",
   "scripts": {
     "dev": "concurrently \"npm run tailwind:watch\" \"npm run air\"",
-    "tailwind:watch": "npx tailwindcss -i ./static/css/input.css -o ./static/css/tailwind.css --watch",
-    "tailwind:build": "npx tailwindcss -i  ./static/css/input.css -o ./src/css/styles.css --minify",
+    "tailwind:watch": "npx tailwindcss -i ./static/css/input.css -o ./static/css/styles.css --watch",
+    "tailwind:build": "npx tailwindcss -i  ./static/css/input.css -o ./static/css/styles.css --minify",
     "air": "air"
   },
   "devDependencies": {
