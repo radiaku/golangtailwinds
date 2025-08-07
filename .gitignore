@@ -4,3 +4,4 @@
 /temp
 *.exe
 .env
+static/css/styles.css
